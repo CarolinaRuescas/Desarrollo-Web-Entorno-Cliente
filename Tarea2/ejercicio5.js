@@ -6,7 +6,7 @@ Se le pide al usuario el número de elementos que va a introducir para calcular 
 var number = Number(prompt("¿De cuántos números quieres calcular la media?"));
 var suma = 0;
 
-for (i = 1; i <= number; i++){
+for (let i = 1; i <= number; i++){
     var a = Number(prompt("Introduce número:"));
     suma += a 
 }

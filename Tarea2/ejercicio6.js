@@ -24,3 +24,6 @@ do{
 }
 while (adivinador != intentos);
 
+
+
+
