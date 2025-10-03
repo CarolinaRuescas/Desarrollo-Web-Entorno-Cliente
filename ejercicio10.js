@@ -2,16 +2,22 @@
 Mostrar los primeros 100 números primos.
 */
 
-for (let i = 2; i <= 100; i++) {
-   let primo = true;
-   for (let j = i - 1; j > 1; j--) {
-       if (i % j === 0) {
-           primo = false;
-           break;
-       }
-   }
-   if (primo) {
-       console.log(i);
-   }
-}
+let notPrime = false;
+let numberCounter =0;   //se van acumulando para tener 100 números primos
+let number = 0;
+
+do{
+    number++;
+    for(let i=2; i < number && notPrime == false;i++){
+        if (number % i == 0){
+            notPrime = true;
+        }
+    }
+    if (!notPrime){
+        console.log(number);
+        numberCounter++;
+    }
+    notPrime = false;
+}while (numberCounter < 100);
+
 
