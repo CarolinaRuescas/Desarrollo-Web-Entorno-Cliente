@@ -7,7 +7,8 @@ let suma = 0;
 let sumaAprobados = 0;
 let sumaSuspensos = 0;
 let countAprobados = 0;
-let countSuspensos = 0;
+let countSuspenso = 0;
+
 
 
 
