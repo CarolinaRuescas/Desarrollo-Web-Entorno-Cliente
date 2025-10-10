@@ -3,3 +3,4 @@
 Recorre ambos arrays y cuenta cuantos elementos son 
 iguales y estan en la misma posicion. Imprime el resultado. 
 */
+
