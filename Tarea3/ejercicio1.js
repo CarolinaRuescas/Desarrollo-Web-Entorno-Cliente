@@ -8,11 +8,11 @@ count = Number(cantidad);
 
 if (cantidad > 0) {
  let values = [];
-
  for (let i = 0; i < count; i++) {
    let value = Number(prompt("Ingresa el número: "));
-   values.push(Number(value));  // con esto estoy diciendole que me añada los numeros que introduce en mi array inicial
- }
+   values[i] = value  // con esto estoy diciendole que me añada los numeros que introduce en mi array inicial
+
+  }
 
  // Lo que hace esto es ordenarlo manualmente de menor a mayor
  for (let i = 0; i < values.length - 1; i++) {
@@ -25,7 +25,7 @@ if (cantidad > 0) {
    }
  }
 
- alert("Los valores ordenados de menor a mayor: " + values.join(", "));
+ alert("Los valores ordenados de menor a mayor: " + values);
 
 } else {
 

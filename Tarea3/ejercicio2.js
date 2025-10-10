@@ -4,6 +4,8 @@
 
 var usuarios = ["Carolina", "Yolanda", "Ares" ];
 var contraseñas = [];
+let nombreUsuario;
+let usuarioValido = false;
 
 let option;
 do{
@@ -14,27 +16,47 @@ do{
         "3.Ver usuarios\n" +  
         "4.Salir\n"));
     if (option == 1){
-        var crearUsuario = prompt("Ingresa el nombre de usuario: ");
-        let existe = false;
-        for (let i=0; i< usuarios.length; i++){
-            if(usuarios[i] === crearUsuario){
-                existe = true;
+        while(!usuarioValido){
+            nombreUsuario = prompt("Introduce el nombre del usuario:");
+            let existe = false;
+            for(let i=0; i< usuarios.length; i++){
+                if(usuarios[i] === nombreUsuario){
+                    existe = true;
+                }
             }
         }
-        if(existe){
-            alert("El usuario ya existe");
-            //return;           // se sale al existir el usuario
+        if (existe){
+            alert("Ese nombre de usuario ya existe. Por favor, intenta con otro.")
+        }else{
+            usuarioValido = true;
         }
-        usuarios.push(crearUsuario);
+        let nuevaContraseña = prompt("Introduce la contraseña:");
+        usuarios.push(nombreUsuario);
+        contraseñas.push(nuevaContraseña);
+        alert("Usuario registrado con éxito.");
 
-        var crearContraseña = Number(prompt("Introduce la contraseña: "));
-        contraseñas.push(crearContraseña);
 
     }else if (option == 2){
+        usuarios = prompt("Ingresa tu usuario: ");
+        let encontrado = false;
+        for (let i=0; i < usuarios.length; i++){
+                if (usuarios[i] === nombreIngresado){
+                    encontrado=true;
+                    let contraseñaIngresada = prompt("Ingresa tu contraseña:");
+                if (contraseñaIngresada === contraseñas[i]){
+                    alert("¡Bienvenido " + nombreIngresado + "!");
+                }
+                }else{
+                    alert("contraseña incorrecta");
+                }
+        }
+        if(!encontrado){
+            alert("El usuario no existe");
+        }
+
+
+
 
     }
-
-
-
 
 }while (option != 3);
