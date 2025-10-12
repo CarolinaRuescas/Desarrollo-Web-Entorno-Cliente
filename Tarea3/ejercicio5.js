@@ -29,3 +29,6 @@ for (let i = 0; i < 5; i++) {
 
 alert("Los números del primer array son: " + array1 + " y los del segundo array son: " + array2);
 alert("Hay " + iguales + " números iguales en las dos arrays que se han introducido");
+
+alert("Los números del primer array son: " + array1 + " y los del segundo array son: " + array2);
+alert("Hay " + iguales + " números iguales en las dos arrays que se han introducido");
