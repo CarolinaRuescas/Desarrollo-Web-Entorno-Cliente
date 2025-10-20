@@ -35,19 +35,13 @@ if(arrayNumeros.includes(5)){
     alert("Tu array no contiene el número 5.")
 }
 
-/*ALTERNATIVA AL EJERCICIO 2
-Comprobar si existe en el array creado algún 5, pero como elemento aislado, es decir, si introducen
-un 5, 50, 65, 95 tendría que decirme que aparecen 4 números 5*/
-
-   
-
 
 /*EJERCICIO 3
 Pedir un número al usuario e indicar cuántas veces aparece en el array anterior
 */
 
 var numeroBuscado = Number(prompt("Dime un número y te indico cuantas veces está en el array"));
-cont = 0;
+let cont = 0;
 
 for(let i=0; i < arrayNumeros.length; i++){
     if (arrayNumeros[i] == numeroBuscado){ 
